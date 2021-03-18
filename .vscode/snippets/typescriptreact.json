@@ -1,0 +1,85 @@
+{
+  // Place your snippets for typescriptreact here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  "func component in TS": {
+    "prefix": "rc",
+    "body": [
+      "//=======================",
+      "export const ${Component}: React.FC<{}> = () => {",
+      "// hooks",
+      "//--------------------------------------",
+      "// functions",
+      "//--------------------------------------",
+      "return (",
+      "<div className=\"\"> </div>",
+      ")",
+      "}"
+    ],
+    "description": "react functional component in TS"
+  },
+  "func component in TS & React default": {
+    "prefix": "rcd",
+    "body": [
+      "//=======================",
+      "export const ${Component}: React.FC<{}> = () => {",
+      "// hooks",
+      "//--------------------------------------",
+      "// functions",
+      "//--------------------------------------",
+      "return (",
+      "<div className=\"\"> </div>",
+      ")",
+      "}",
+      "export ${Component} default"
+    ],
+    "description": "react functional component in TS"
+  },
+  "sperator-short": {
+    "prefix": "//",
+    "body": ["//--------------------------------------"],
+    "description": "short sperator"
+  },
+  "jest suite": {
+    "prefix": "suite",
+    "body": [
+      "describe('${SUT}', ()=> {",
+      "it('Should  WHEN ', () => {",
+      "expect()",
+      "})",
+      " })",
+      "//--------------------------------------"
+    ],
+    "description": "jest suite snippet"
+  },
+  "test jest": {
+    "prefix": "it",
+    "body": [
+      "test('should  WHEN ', () => {",
+      "expect()",
+      "})",
+      "//--------------------------------------"
+    ],
+    "description": "test case snippet"
+  },
+  "getStaticProps": {
+    "prefix": "getProps",
+    "body": [
+      "export const getStaticProps: GetStaticProps = async () => {",
+      "return {",
+      "props: {},",
+      "}",
+      "}"
+    ]
+  },
+  "import react": {
+    "prefix": "ir",
+    "body": ["import * as React from 'react'"]
+  },
+  "react-state-hooks": {
+    "prefix": "useS",
+    "body": "const [$state,set$state]= React.useState()"
+  }
+}
