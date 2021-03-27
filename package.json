@@ -27,11 +27,14 @@
     "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-icons": "^4.2.0",
     "react-query": "^3.12.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/jit": "^0.1.1",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
@@ -57,9 +60,8 @@
     "typescript": "^4.2.3"
   },
   "husky": {
-    "pre-commit": "npx --no-install lint-staged && npm run test-all && npm run build",
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-    "pre-push": "npm run test-all"
+    "pre-commit": "lint-staged",
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "lint-staged": {
     "**/*.+(ts|js|tsx|json)": [
@@ -67,6 +69,11 @@
       "git add"
     ],
     "*.+(js|ts|tsx)": "eslint"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "keyword": [
     "nextjs",
