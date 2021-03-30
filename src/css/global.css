@@ -2,5 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.press-effect {
+  @apply transform active:scale-90;
+}
+.btn {
+  @apply py-1 mx-auto font-semibold text-center rounded focus:outline-none hover:shadow;
+}
+.icon-btn {
+  @apply p-1 rounded focus:outline-none hover:shadow;
+}
+
 /* default font-family poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
