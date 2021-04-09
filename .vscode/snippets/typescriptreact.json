@@ -9,10 +9,9 @@
     "body": [
       "//=======================",
       "export const ${Component}: React.FC<{}> = () => {",
-      "// hooks",
-      "//--------------------------------------",
-      "// functions",
-      "//--------------------------------------",
+      "//--------------------------------------hooks",
+      "//--------------------------------------functions",
+      "//======================================return",
       "return (",
       "<div className=\"\"> </div>",
       ")",
@@ -24,16 +23,15 @@
     "prefix": "rcd",
     "body": [
       "//=======================",
-      "export const ${Component}: React.FC<{}> = () => {",
-      "// hooks",
-      "//--------------------------------------",
-      "// functions",
-      "//--------------------------------------",
+      "const ${Component}: React.FC<{}> = () => {",
+      "//--------------------------------------hooks",
+      "//--------------------------------------functions",
+      "//======================================return",
       "return (",
       "<div className=\"\"> </div>",
       ")",
       "}",
-      "export ${Component} default"
+      "export default ${Component} "
     ],
     "description": "react functional component in TS"
   },
@@ -57,7 +55,7 @@
   "test jest": {
     "prefix": "it",
     "body": [
-      "it('should  WHEN ', () => {",
+      "it('Should  WHEN ', () => {",
       "expect()",
       "})",
       "//--------------------------------------"
@@ -80,6 +78,18 @@
   },
   "react-state-hooks": {
     "prefix": "useS",
-    "body": "const [$state,set$state]= React.useState()"
+    "body": "const [${state},set${state/(.*)/${1:/upcase}/}]= React.useState()"
+  },
+  "ren": {
+    "prefix": "ren",
+    "body": "const {container} = render(<${Component})"
+  },
+  "arrow fn": {
+    "prefix": "fn",
+    "body": "() => {}"
+  },
+  "map fn": {
+    "prefix": "mfn",
+    "body": ["(o,i)  => (", "<div key={i}>", "</div>)"]
   }
 }
