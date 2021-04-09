@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.press-effect {
+.press-effect-1 {
   @apply transform active:scale-90;
 }
+.press-effect-2 {
+  @apply transform active:scale-110;
+}
 .btn {
-  @apply py-1 mx-auto font-semibold text-center rounded focus:outline-none hover:shadow;
+  @apply p-1 mx-auto font-semibold text-center rounded focus:outline-none hover:shadow;
 }
 .icon-btn {
   @apply p-1 rounded focus:outline-none hover:shadow;

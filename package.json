@@ -12,9 +12,11 @@
     "lint": "eslint --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx .",
     "temp": "ls -la .git/hooks",
     "test": "jest",
+    "test:w": "jest --watch tests/components/$1",
+    "test:w-p": "jest --watch tests/pages/$1",
     "test-all": "npm-run-all -p check-types format lint test",
     "i": "npm i & npm update",
-    "post:install": "npm dedpue",
+    "post:install": "npm dedupe",
     "clean": "rm -rf node_modules & rm package-lock.json & npm i"
   },
   "dependencies": {
@@ -35,7 +37,6 @@
     "@commitlint/config-conventional": "^12.0.1",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.3.2",
-    "@tailwindcss/jit": "^0.1.1",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "@types/jest": "^26.0.20",
@@ -56,7 +57,7 @@
     "postcss": "^8.2.8",
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1",
-    "tailwindcss": "^2.0.3",
+    "tailwindcss": "^2.1.1",
     "typescript": "^4.2.3"
   },
   "husky": {
@@ -65,8 +66,7 @@
   },
   "lint-staged": {
     "**/*.+(ts|js|tsx|json)": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.+(js|ts|tsx)": "eslint"
   },
