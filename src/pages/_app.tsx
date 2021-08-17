@@ -9,10 +9,10 @@ const MyApp: React.FC<{ Component: React.FC; pageProps: any }> = ({
   pageProps,
 }): JSX.Element => {
   return (
-    <div className={`${devMode ? 'debug-screens' : ''} bg-hero-polka-dots-100`}>
+    <div className={`${devMode ? 'debug-screens' : ''}`}>
       <ChakraProvider theme={theme}>
         <link rel="icon" href="/favicon.ico" />
-        <title>Nextjs-boilerplate</title>
+        <title>Home</title>
         <Component {...pageProps} />
       </ChakraProvider>
     </div>
