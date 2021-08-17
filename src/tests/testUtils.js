@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { ChakraProvider } from '@chakra-ui/react';
 import { render } from '@testing-library/react';
-import { RouterContext } from 'next/dist/next-server/lib/router-context';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const Providers = ({ children }) => {

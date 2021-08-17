@@ -1,10 +1,12 @@
 const withPlugins = require('next-compose-plugins');
+const withPWA = require('next-pwa');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
 module.exports = withPlugins([
   [withBundleAnalyzer],
+  [withPWA({ pwa: { dest: 'public' } })],
   [
     {
       async headers() {
@@ -17,7 +19,6 @@ module.exports = withPlugins([
       },
     },
   ],
-  // your other plugins here
 ]);
 
 // https://securityheaders.com
