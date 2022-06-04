@@ -38,3 +38,4 @@ ngrok.exe
 
 workbox-*
 sw.js
+public/sw.js.map

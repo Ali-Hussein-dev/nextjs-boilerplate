@@ -1,30 +1,20 @@
-const colors = require('tailwindcss/colors');
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
+  content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      colors: {
-        blueGray: colors.blueGray,
-        trueGray: colors.trueGray,
-        sky: colors.sky,
-        orange: colors.orange,
-      },
-    },
+    extend: {},
     debugScreens: {
       style: {
         backgroundColor: '#eab308',
         color: '#334155',
+        opacity: 0.2,
       },
       position: ['top', 'left'],
     },
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
     require('tailwindcss-debug-screens'),
-    require('tailwindcss-scroll-snap'),
     require('tailwind-heropatterns')({
       // as per tailwind docs you can pass variants
       variants: [],

@@ -19,8 +19,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "removeComments": true
+    "removeComments": true,
+    "incremental": true
   },
-  "exclude": ["node_modules", ".next", "out"],
+  "exclude": ["node_modules", ".next", "out", ".history"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "main.d.ts"]
 }
