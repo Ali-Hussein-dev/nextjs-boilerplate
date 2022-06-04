@@ -9,11 +9,36 @@
   .press-effect-2 {
     @apply transform active:scale-110;
   }
-  .btn {
-    @apply p-1 mx-auto font-semibold text-center rounded focus:outline-none hover:shadow;
+
+  /* row */
+  .row-start {
+    @apply flex items-center justify-start;
   }
-  .icon-btn {
-    @apply p-1 rounded focus:outline-none hover:shadow;
+  .row-end {
+    @apply flex items-center justify-end;
+  }
+  .row-center {
+    @apply flex items-center justify-center;
+  }
+  .row-between {
+    @apply flex items-center justify-between;
+  }
+
+  /* column */
+  .f-col {
+    @apply flex flex-col;
+  }
+  .col-center {
+    @apply items-center justify-center f-col;
+  }
+  .col-start {
+    @apply items-start justify-center f-col;
+  }
+  .col-end {
+    @apply items-end justify-center f-col;
+  }
+  .col-between {
+    @apply items-center justify-between f-col;
   }
 }
 
